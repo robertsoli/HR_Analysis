@@ -6,31 +6,31 @@
 
 ## Human Resources Analysis
 
-### Unveiling Insights into Employee Satisfaction and Retention
+## Unveiling Insights into Employee Satisfaction and Retention
 
 ---
 
-#### Project Overview
+### Project Overview
 
 The aim of case study is to determine possible reasons for employee dissatisfaction and attrition, with an aim to improve employee satisfaction at the company, and reduce attrition. 
 
 ---
 
-#### Codes and Resources Used
+### Codes and Resources Used
 
-- T-SQL | Microsoft SQL Server 20
-- Tableau
+- T-SQL | Microsoft SQL Server Management Studio 20
+- Tableau Public
 
 ---
 
-#### Installation and Setup
+### Installation and Setup
 
-- Tableau Public was used to host the completed charts, so it can be viewed without the need to download software
+- Tableau Public was used to host the completed charts, so it can be viewed online without the need to download software
 - Github was used to host the project publically, so there is no need for the viewer to download any software there either
 
 ---
 
-#### Data structure
+### Data structure
 
 The files name is HR_capstone_dataset.csv and its structure is as follows:
 
@@ -58,43 +58,26 @@ The files name is HR_capstone_dataset.csv and its structure is as follows:
 
   - **salary**: The employee's salary (in U.S. dollars)
 
+---
 
+### Data Preprocessing
 
+All cleaning and manipulation tasks were done in Microsoft Sql Server Management Studio 20.
 
+**Cleaning tasks** :
 
+  - Renaming columns to improve readability and avoid clashing with functions
+  - Checking for missing values
+  - Checking for duplicate entries
 
+**Data Manipulation** :
 
+  - Creating new variables needed in analysis
+  - Changing data formatting for existing variables
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### Citations
+### Citations
 
 The following [dataset](https://www.kaggle.com/datasets/raminhuseyn/hr-analytics-data-set) was obtained on the platform Kaggle, made public by the [owner](https://www.kaggle.com/raminhuseyn)
 
