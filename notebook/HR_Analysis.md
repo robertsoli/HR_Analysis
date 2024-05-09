@@ -10,26 +10,31 @@ The aim of this case study is to determine possible reasons for employee dissati
 
 ### Defining the business tasks
 
-**Q1** : 
+**Q1** : How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
 
-**Q2** : 
+Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked#:~:text=The%20Act%20requires%20that%20employees,pay%20for%20the%20overtime%20hours.) from the US Department of Labor
 
-**Q3** : 
+**Q2** : Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction? 
 
-**Q4** :
+**Q3** : Is there a relationship between time spent at company and job satisfaction?
 
-**Q5** :
+**Q4** : How many employees experienced work accidents and left the company? How many stayed?
 
-**Q6** :
+**Q5** : How does a promotion affect employee retention?
 
-**Q7** :
+**Q6** : Are there particular departments that have a higher rate of attrition?
 
-**Q8** :
+**Q7** : Which departments show the highest performance review score? Which departments show the lowest?
 
-**Q9** :
+**Q8** : Are employees working more than the standard 160 hours per month scoring lower on their performance reviews than employees working the standard?
 
-**Q10** :
+**Q9** : Are employees who score a high performance review getting rightfully promoted?
 
+**Q10** : Are employees who stay at the company for 5 years or more, more satisfied overall than employees who stay at the company for less than 5 years?
+
+**Q11** : Are employees that are working above the recommended amount of hours assigned too many projects?
+
+**Q12** : How many employees left and what percentage of the total staff is it?
 
 ---
 
@@ -144,4 +149,7 @@ GO
 
 ---
 
+#### Checking for duplicate entries
+
+```sql
 
