@@ -199,7 +199,19 @@ DELETE FROM DuplicateCTE WHERE RowNum > 1;
 
 ### Exploratory Data Analysis
 
-First we would need to create bins for satisfaction_level so that we can group the employees and explore the data
+Business Task Q1: How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
+
+Firstly calculating the amount of employees working over 160 hours per month
+
+```sql
+SELECT COUNT(*) AS over_160_hours
+  FROM dbo.HR_capstone_dataset
+  WHERE average_monthly_hours > 160
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/26e49c0b-11a6-46b3-94b1-b83f6dd49eea)
+
+We would then need to create bins for satisfaction_level so that we can group the employees and explore the data
 
 ```sql
 ALTER TABLE dbo.HR_capstone_dataset_copy ADD satisfaction_group varchar(50);
@@ -218,6 +230,8 @@ UPDATE dbo.HR_capstone_dataset_copy  SET satisfaction_group =
 END);
 ```
 
+To get an overview of how the employees satisfaction levels are distributed
+
 ```sql
 SELECT satisfaction_group, COUNT(*) AS number_of_employees
   FROM [HR Analytics].[dbo].[HR_capstone_dataset_copy]
@@ -226,6 +240,26 @@ SELECT satisfaction_group, COUNT(*) AS number_of_employees
 ```
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/79bf71ea-1f68-4ce0-b05d-b08cf81bc343)
+
+To observe how employees satisfaction levels are distributed when employees are working over or under the recommended 160 monthly hours
+
+```sql
+SELECT
+    satisfaction_group,
+    SUM(CASE WHEN average_monthly_hours < 160 THEN 1 ELSE 0 END) AS less_than_160_hours,
+    SUM(CASE WHEN average_monthly_hours >= 160 THEN 1 ELSE 0 END) AS more_than_160_hours
+FROM dbo.HR_capstone_dataset_copy
+GROUP BY satisfaction_group
+ORDER BY satisfaction_group ASC;
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/5ad768ba-a892-488b-a008-61afdbef95b6)
+
+---
+
+A Pyramid Chart showing the data in a more pallatable fashion
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/1d59e3dd-508e-41fb-80d4-b25fa2245ca8)
 
 
 
