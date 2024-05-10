@@ -273,6 +273,18 @@ A Scatter Plot
 
 For Business Task Q2 : Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction?
 
+To observe the job satisfaction level of employees by the number of projects they are working on
+
+```sql
+SELECT AVG(satisfaction_level) AS avg_satisfaction_level, number_project
+FROM dbo.HR_capstone_dataset_copy
+GROUP BY number_project
+ORDER BY avg_satisfaction_level ASC
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/f5b0fb5d-9835-457e-92d4-97715426589e)
+
+
 
 
 
