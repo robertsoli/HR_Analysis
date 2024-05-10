@@ -246,20 +246,32 @@ To observe how employees satisfaction levels are distributed when employees are 
 ```sql
 SELECT
     satisfaction_group,
-    SUM(CASE WHEN average_monthly_hours < 160 THEN 1 ELSE 0 END) AS less_than_160_hours,
-    SUM(CASE WHEN average_monthly_hours >= 160 THEN 1 ELSE 0 END) AS more_than_160_hours
+    SUM(CASE WHEN average_monthly_hours <= 160 THEN 1 ELSE 0 END) AS less_than_160_hours,
+    SUM(CASE WHEN average_monthly_hours > 160 THEN 1 ELSE 0 END) AS more_than_160_hours
 FROM dbo.HR_capstone_dataset_copy
 GROUP BY satisfaction_group
 ORDER BY satisfaction_group ASC;
 ```
 
-![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/5ad768ba-a892-488b-a008-61afdbef95b6)
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/46e2b601-585b-4f74-bc2f-741e56f5d490)
 
 ---
 
-A Pyramid Chart showing the data in a more pallatable fashion
+Charts to view the data in a more pallatable means
+
+---
+
+A Pyramid Chart
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/1d59e3dd-508e-41fb-80d4-b25fa2245ca8)
+
+A Scatter Plot
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/0b53d511-d8ad-4b08-b868-0679bd3b12fe)
+
+---
+
+For Business Task Q2 : Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction?
 
 
 
