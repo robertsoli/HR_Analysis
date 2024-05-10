@@ -55,9 +55,19 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 ---
 
-### Data Cleaning and EDA 
+### Data Cleaning 
 
 - Data formats were corrected on import to MS Sql Server Management Studio
+
+- Checking for null values
+
+- Finding, inspecting and removing duplicate entries
+
+---
+
+### Data Manipulation
+
+- Renaming of variables
 
 - 
 
@@ -152,4 +162,72 @@ GO
 #### Checking for duplicate entries
 
 ```sql
+SELECT satisfaction_level, last_evaluation, number_project, average_monthly_hours, time_spend_company, work_accident, left_company, promotion_last_5years, department, salary, COUNT(*) AS duplicates
+FROM HR_capstone_dataset
+GROUP BY satisfaction_level, last_evaluation, number_project, average_monthly_hours, time_spend_company, work_accident, left_company, promotion_last_5years, department, salary
+HAVING COUNT(*) > 1
+ORDER BY duplicates DESC;
+```
+
+---
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/5e08f463-9e23-428b-8382-f0dc7ba6848a)
+
+---
+
+#### Removing the duplicate entries
+
+```sql
+WITH DuplicateCTE AS
+(
+SELECT *,
+  ROW_NUMBER() OVER (PARTITION BY satisfaction_level, last_evaluation, number_project, average_monthly_hours, time_spend_company, work_accident, left_company,    promotion_last_5years, department, salary
+ORDER BY (SELECT NULL)) AS RowNum
+FROM HR_capstone_dataset
+)
+DELETE FROM DuplicateCTE WHERE RowNum > 1;
+```
+
+---
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/a3047524-2a71-43f8-a144-6c616cf478ff)
+
+> [!NOTE]
+> Ran the query searching for duplicates again, none found. Reason for the difference in rows affected is that there were multiple duplicates of the same rows, in some cases as many as 6. 
+
+---
+
+### Exploratory Data Analysis
+
+First we would need to create bins for satisfaction_level so that we can group the employees and explore the data
+
+```sql
+ALTER TABLE dbo.HR_capstone_dataset_copy ADD satisfaction_group varchar(50);
+
+UPDATE dbo.HR_capstone_dataset_copy  SET satisfaction_group =
+(CASE WHEN satisfaction_level <=0.1 THEN '0-10%'
+	  WHEN satisfaction_level > 0.1 AND satisfaction_level <=0.2 THEN '10-20%'
+    WHEN satisfaction_level > 0.2 AND satisfaction_level <=0.3 THEN '20-30%'
+	  WHEN satisfaction_level > 0.3 AND satisfaction_level <=0.4 THEN '30-40%'
+	  WHEN satisfaction_level > 0.4 AND satisfaction_level <=0.5 THEN '40-50%'
+	  WHEN satisfaction_level > 0.5 AND satisfaction_level <=0.6 THEN '50-60%'
+	  WHEN satisfaction_level > 0.6 AND satisfaction_level <=0.7 THEN '60-70%'
+    WHEN satisfaction_level > 0.7 AND satisfaction_level <=0.8 THEN '70-80%'
+	  WHEN satisfaction_level > 0.8 AND satisfaction_level <=0.9 THEN '80-90%'
+	  WHEN satisfaction_level > 0.9 AND satisfaction_level <=1 THEN '90-100%'
+END);
+```
+
+```sql
+SELECT satisfaction_group, COUNT(*) AS number_of_employees
+  FROM [HR Analytics].[dbo].[HR_capstone_dataset_copy]
+  GROUP BY satisfaction_group
+  ORDER BY satisfaction_group ASC
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/79bf71ea-1f68-4ce0-b05d-b08cf81bc343)
+
+
+
+
 
