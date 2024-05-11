@@ -16,7 +16,7 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 **Q2** : Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction? 
 
-**Q3** : Is there a relationship between time spent at company and job satisfaction?
+**Q3** : How does time spent at the company affect overall job satisfaction?
 
 **Q4** : How many employees experienced work accidents and left the company? How many stayed?
 
@@ -283,6 +283,72 @@ ORDER BY avg_satisfaction_level ASC
 ```
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/f5b0fb5d-9835-457e-92d4-97715426589e)
+
+A Bar Chart showing Average Satisfaction Level by Number of Projects
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/90b1945c-be0a-493d-b022-312bcfbdc8e5)
+
+  - We can clearly see that when employees are tasked with 7 projects monthly, that there is a massive drop in satisfaction level, and that employees tasked with 6 projects monthly also show a very low satisfaction score. 
+
+  - Employees tasked with 3 or 4 projects record the highest level of satisfaction at an average of 0.69
+
+---
+
+For business task Q3 : How does time spent at the company affect overall job satisfaction? 
+
+First lets have a look into the average satisfaction levels by tenure
+
+```sql
+SELECT time_spend_company, AVG(satisfaction_level) AS avg_satisfaction
+FROM dbo.HR_capstone_dataset_copy
+GROUP BY time_spend_company
+ORDER BY time_spend_company
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/880ccce8-ba14-4cea-9fc5-22750b0575cd)
+
+The lowest average satisfaction level is observed in employees who have been at the company for 4 years.
+
+The highest average satisfaction level is observed in employees who have been at the company for 2 years. 
+
+ - This may be due to the fact that new employees tend to be excited about joining a company, and have not been exposed to a lengthy term of work in the same business.
+
+To drill down on the low satisfaction level at 4 years tenure, lets look at the promotion ratio for tenures:
+
+```sql
+SELECT time_spend_company, 
+	SUM(promotion_last_5years) AS promotion_count, 
+	COUNT(promotion_last_5years) AS employees_in_department,
+	CAST((SUM(promotion_last_5years) * 100.0 / COUNT(promotion_last_5years)) AS DECIMAL(10,2)) AS promotion_percentage
+FROM dbo.HR_capstone_dataset_copy
+GROUP BY time_spend_company
+ORDER BY time_spend_company
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/589e6fed-2f1d-4461-8f59-6d368ddc1630)
+
+A Bar Chart to show the data in a more visual sense
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/94a77a68-267a-46b0-8ec9-4b331d248796)
+
+---
+
+For business task Q4 : How many employees experienced work accidents and left the company? How many stayed?
+
+```sql
+SELECT 
+COUNT(*) AS number_of_employees, 
+work_accident, 
+left_company
+FROM dbo.HR_capstone_dataset_copy
+WHERE work_accident = 1
+GROUP BY work_accident, left_company
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/e1f6459a-9493-499c-a38a-17c79bea62c6)
+
+
+
 
 
 
