@@ -24,7 +24,7 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 **Q6** : Are there particular departments that have a higher rate of attrition?
 
-**Q7** : Which departments show the highest performance review score? Which departments show the lowest?
+**Q7** : Which departments show the highest performance review score for active employees? Which departments show the lowest?
 
 **Q8** : Are employees working more than the standard 160 hours per month scoring lower on their performance reviews than employees working the standard?
 
@@ -379,12 +379,81 @@ FROM dbo.HR_capstone_dataset_copy
 
 For business task Q5 : How does a promotion affect employee retention?
 
+Looking at the number of employees who have left the company without receiving a promotion, and the amount of employees who left after receiving a promotion would be of use in this scenario: 
 
-  
+```sql
+SELECT 
+    promotion_last_5years,
+    SUM(CASE WHEN left_company = 1 THEN 1 ELSE 0 END) AS left_company,
+    SUM(promotion_last_5years) AS total_promotions
+FROM 
+    dbo.HR_capstone_dataset_copy
+GROUP BY 
+    promotion_last_5years;
+```  
 
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/2d6a0d01-5388-4d12-8f5b-78832c25a741)
 
+- Based on the result set, only 8 employees out of 203 left after receiving a promotion.
+- 1983 employees left the company without a promotion, and although this could be for a plethora of other reasons, employee retention is definitely higher after receiving a promotion.
 
+---
 
+For business task Q6 : Are there particular departments that have a higher rate of attrition?
+
+Here we break down the count of employees who left the department, the total number of active employees in the department, and the percentage of employees who left the company: 
+
+```sql
+SELECT department,
+SUM(left_company) AS left_company,
+SUM(CASE WHEN left_company = 0 THEN 1 ELSE 0 END) AS total_active_employees,
+(SUM(CASE WHEN left_company = 1 THEN 1 ELSE 0 END) * 100) / NULLIF(SUM(CASE WHEN left_company = 0 THEN 1 ELSE 0 END), 0) AS percentage_left
+FROM dbo.HR_capstone_dataset_copy
+GROUP BY department
+ORDER BY left_company DESC
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/495fe4ff-9784-4e5d-b5a4-be94bfdb7dcd)
+
+ - Although the Sales department had the higher count of employees who left the company, this is due to it being the largest department overall. Percentage wise, there is not a department with a significantly higher rate of attrition than others. Both RND and Management have the lowest rate of attrition, coming in at 13%. 
+
+And a horizontal bar chart to vizualise the data
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/c4ec8ed5-bf4c-4989-869c-ab01a5bd5faa)
+
+---
+
+For business task Q7 : Which departments show the highest performance review score for active employees? Which departments show the lowest?
+
+For this query, it would be useful to create bins of 10% each, and view the performance evaluation counts in those bins, by department:
+
+```sql
+SELECT 
+	department,
+	COUNT(last_evaluation) AS total_active_employees,
+	SUM(CASE WHEN evaluation_group = '0-10%' THEN 1 ELSE 0 END) AS zero_to_ten,
+	SUM(CASE WHEN evaluation_group = '10-20%' THEN 1 ELSE 0 END) AS ten_to_twenty,
+	SUM(CASE WHEN evaluation_group = '20-30%' THEN 1 ELSE 0 END) AS twenty_to_thirty,
+	SUM(CASE WHEN evaluation_group = '30-40%' THEN 1 ELSE 0 END) AS thirty_to_fourty,
+	SUM(CASE WHEN evaluation_group = '40-50%' THEN 1 ELSE 0 END) AS fourty_to_fifty,
+	SUM(CASE WHEN evaluation_group = '50-60%' THEN 1 ELSE 0 END) AS fifty_to_sixty,
+	SUM(CASE WHEN evaluation_group = '60-70%' THEN 1 ELSE 0 END) AS sixty_to_seventy,
+	SUM(CASE WHEN evaluation_group = '70-80%' THEN 1 ELSE 0 END) AS seventy_to_eighty,
+	SUM(CASE WHEN evaluation_group = '80-90%' THEN 1 ELSE 0 END) AS eighty_to_ninety,
+	SUM(CASE WHEN evaluation_group = '90-100%' THEN 1 ELSE 0 END) AS ninety_to_one_hundred
+FROM dbo.HR_capstone_dataset_copy
+WHERE left_company = 0
+GROUP BY department
+ORDER BY total_active_employees DESC;
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/caacc4c3-9f61-4916-966a-952b82c28dd9)
+
+Based on the amount of data in the table, it would be more useful to view it in a chart to look for trends :
+
+Blend of a heat map and a bar chart
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/be54e415-7013-4777-87e5-5f44db0d4d0b)
 
 
 
