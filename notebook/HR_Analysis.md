@@ -456,5 +456,7 @@ Blend of a heat map and a bar chart
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/be54e415-7013-4777-87e5-5f44db0d4d0b)
 
 - Although this chart feels cramped, it does make it easier to draw the following conclusions:
-  - 
+  - At 18%, HR comes in with the highest number of employees receiving a 90-100% performance review
+  - At 3.1%, Product Management comes in with the highest number of employees receiving a 30-40% performance review
+  
 
