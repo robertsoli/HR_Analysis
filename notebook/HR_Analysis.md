@@ -419,7 +419,7 @@ ORDER BY left_company DESC
 
 And a horizontal bar chart to vizualise the data
 
-![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/c4ec8ed5-bf4c-4989-869c-ab01a5bd5faa)
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/af5ee1cb-5b15-4f5a-bbcd-5bb5170c8ac7)
 
 ---
 
