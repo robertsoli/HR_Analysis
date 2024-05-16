@@ -26,9 +26,9 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 **Q7** : Which departments show the highest performance review score for active employees? Which departments show the lowest?
 
-**Q8** : Are employees working more than the standard 160 hours per month scoring lower on their performance reviews than employees working the standard?
+**Q8** : How do monthly working hours influence performance scores?
 
-**Q9** : Are employees who score a high performance review getting rightfully promoted?
+**Q9** : Do average monthly working hours affect promotions?
 
 **Q10** : Are employees who stay at the company for 5 years or more, more satisfied overall than employees who stay at the company for less than 5 years?
 
@@ -456,7 +456,35 @@ Blend of a heat map and a bar chart
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/be54e415-7013-4777-87e5-5f44db0d4d0b)
 
 - Although this chart feels cramped, it does make it easier to draw the following conclusions:
-  - At 18%, HR comes in with the highest number of employees receiving a 90-100% performance review
-  - At 3.1%, Product Management comes in with the highest number of employees receiving a 30-40% performance review
+  - At 18%, HR comes in with the highest number of employees receiving a 90-100% performance review, as well as 55.5% of the department scoring 70% or more in evaluation score. 
+  - At 3.1%, Product Management comes in with the highest number of employees receiving a 30-40% performance review, as well as 11.4% of the department scoring less than 50% in evaluation score.
+ 
+---
+
+For business task Q8 : How do monthly working hours influence performance scores?
+
+Based on the amount of data points, a Highlight Table would be best :
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/b2cd3cab-7d93-479a-be23-cb1ef7bba935)
+
+Should higher working hours be a strong indicator of poor performance evaluation scores, we would expect to see a cluster of employees in the lower performance bins over the 160 hours per month mark, but that is not the case. Observations :
+
+  - There is a cluster of employees with performance evaluations between 40 and 60%, when working between 130 to 150 hours per month.
+  - There is a cluster of employees with performance evaluations between 80 and 100%, when working between 240 to 260 hours per month.
+
+Overall, it seems that employees working more than 160 hours per month are getting higher evaluation scores, this may be due to the following reasons:
+
+ - The company places a high value on employees who work more than the standard amount, thus the higher performance scores for employees working in excess of 160 hours per month.
+ - Employees may be paid overtime, resulting in higher motivation to work longer hours monthly at a high level of performance.
+
+---
+
+For business question Q9 : How do average monthly working hours affect promotions per department?
+
+
+
+
+
+
   
 
