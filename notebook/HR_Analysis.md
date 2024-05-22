@@ -28,7 +28,7 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 **Q8** : How do monthly working hours influence performance scores?
 
-**Q9** : Do average monthly working hours affect promotions?
+**Q9** : Do long working hours contribute to employees leaving the company?
 
 **Q10** : Are employees who stay at the company for 5 years or more, more satisfied overall than employees who stay at the company for less than 5 years?
 
@@ -479,7 +479,7 @@ Overall, it seems that employees working more than 160 hours per month are getti
 
 ---
 
-For business question Q9 : How do average monthly working hours affect promotions per department?
+For business question Q9 : Do long working hours contribute to employees leaving the company?
 
 
 
