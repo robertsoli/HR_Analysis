@@ -479,12 +479,39 @@ Overall, it seems that employees working more than 160 hours per month are getti
 
 ---
 
-For business question Q9 : Do long working hours contribute to employees leaving the company?
+For business question Q9 : Does project count contribute to employee attrition?
 
+In order to get a view of the employees who left the company grouped by the number of projects they were working on : 
 
+```sql
+SELECT 
+    number_project, 
+    employees_left, 
+    employees_stayed, 
+    total_employees, 
+    CAST(employees_left AS DECIMAL) / total_employees * 100 AS percentage_left
+FROM (
+    SELECT 
+        number_project,
+        SUM(CASE WHEN left_company = 1 THEN 1 ELSE 0 END) AS employees_left,
+        SUM(CASE WHEN left_company = 0 THEN 1 ELSE 0 END) AS employees_stayed,
+        COUNT(CASE WHEN left_company IN (0, 1) THEN 1 END) AS total_employees
+    FROM 
+        dbo.HR_capstone_dataset_copy
+    GROUP BY 
+        number_project
+) AS subquery;
+```
 
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/d78462f5-ce98-40cd-84ee-797d5dd1fafe)
 
+Below is a custom Bar Chart showing the attrition rate by number of projects:
 
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/25063540-ddc1-421d-bb5e-4bdd4233f943)
 
+Based on the data, the following observations can be made:
+
+ - All employees who were assigned to 7 Projects left the company
+ - 
   
 
