@@ -28,11 +28,11 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 **Q8** : How do monthly working hours influence performance scores?
 
-**Q9** : Do long working hours contribute to employees leaving the company?
+**Q9** : Does project count contribute to employee attrition?
 
-**Q10** : Are employees who stay at the company for 5 years or more, more satisfied overall than employees who stay at the company for less than 5 years?
+**Q10** : Are certain departments assigned more projects than others?
 
-**Q11** : Are employees that are working above the recommended amount of hours assigned too many projects?
+**Q11** : How do evaluation scores fluctuate with salary brackets? 
 
 **Q12** : How many employees left and what percentage of the total staff is it?
 
@@ -512,6 +512,43 @@ Below is a custom Bar Chart showing the attrition rate by number of projects:
 Based on the data, the following observations can be made:
 
  - All employees who were assigned to 7 Projects left the company
- - 
-  
+ - 45% of employees who were assigned to 6 projects left the company
+ - 54% of employees who were assigned to 2 projects left the company
+ - When assigned 3, 4 or 5 projects attrition is significantly lower
+
+---
+
+For business task Q10 : Are certain departments assigned more projects than others?
+
+Lets create a table for the departments, their average number of projects, and a count of the number of projects per department: 
+
+```sql
+SELECT department,
+AVG(CAST(number_project AS FLOAT)) AS average_projects,
+SUM(CASE WHEN number_project = 7 THEN 1 ELSE 0 END) AS seven_projects,
+SUM(CASE WHEN number_project = 6 THEN 1 ELSE 0 END) AS six_projects,
+SUM(CASE WHEN number_project = 5 THEN 1 ELSE 0 END) AS five_projects,
+SUM(CASE WHEN number_project = 4 THEN 1 ELSE 0 END) AS four_projects,
+SUM(CASE WHEN number_project = 3 THEN 1 ELSE 0 END) AS three_projects,
+SUM(CASE WHEN number_project = 2 THEN 1 ELSE 0 END) AS two_projects
+FROM dbo.HR_capstone_dataset_copy
+GROUP BY department
+ORDER BY seven_projects DESC
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/357c6097-2633-4e82-b34a-7fabd0031ab6)
+
+Based on the data, we can make the following observations: 
+
+- There is no significant difference in the average number of projects being assigned for any department
+- Based on the size of the sales department, the numbers are obviously higher for employees assigned a problematic number of projects, but in reality the ratio is almost exactly the same with all the other departments.
+
+> [!NOTE]  
+> There wont be a useful chart to display the data differently as we have the answer to our business task from the query results
+
+---
+
+For business task Q11 : How do evaluation scores fluctuate with salary brackets? 
+
+
 
