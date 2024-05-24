@@ -34,7 +34,7 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 **Q11** : How do evaluation scores fluctuate with salary brackets? 
 
-**Q12** : How many employees left and what percentage of the total staff is it?
+**Q12** : How are salary brackets distributed per department? 
 
 ---
 
@@ -548,7 +548,45 @@ Based on the data, we can make the following observations:
 
 ---
 
-For business task Q11 : How do evaluation scores fluctuate with salary brackets? 
+For business task Q11 :  How do evaluation scores fluctuate with salary brackets? 
+
+
+
+---
+
+For business task Q12 : How are salary brackets distributed per department? 
+
+It would be useful to determine the number of employees that fall into different salary brackets, and the percentage thereof : 
+
+```sql
+SELECT 
+    department,
+	total_employees,
+    low_salary_count, 
+    medium_salary_count, 
+    high_salary_count, 
+    CAST(low_salary_count AS DECIMAL) / total_employees * 100.0 AS low_percentage,
+	CAST(medium_salary_count AS DECIMAL) / total_employees * 100 AS medium_percentage,
+	CAST(high_salary_count AS DECIMAL) / total_employees * 100 AS high_percentage
+FROM (
+    SELECT 
+        department,
+		COUNT(*) AS total_employees,
+SUM(CASE WHEN salary = 'low' THEN 1 ELSE 0 END) AS low_salary_count,
+SUM(CASE WHEN salary = 'medium' THEN 1 ELSE 0 END) AS medium_salary_count,
+SUM(CASE WHEN salary = 'high' THEN 1 ELSE 0 END) AS high_salary_count
+    FROM 
+        dbo.HR_capstone_dataset_copy
+GROUP BY department
+)
+AS subquery;
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/875d82fd-e8b3-4bfb-a4bd-38b8e17680ab)
+
+Based on the size differences in the number of employees in each department, the distribution is best viewed as a percentage in a bar chart form:
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/31933571-6ac8-4891-bfe6-2ad917e57afc)
 
 
 
