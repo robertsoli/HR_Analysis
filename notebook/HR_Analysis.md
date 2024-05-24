@@ -552,7 +552,7 @@ For business task Q11 :  How do evaluation scores fluctuate with salary brackets
 
 For the purpose of viewing these data, a visualization is the simplest way to look for any trends, so a Bar Chart gave the best visual cues:
 
-![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/8d38978b-836b-4a22-8db7-530dcda02fdf)
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/12f0b5d4-02e7-4b62-bc52-a8295c46fe8a)
 
 ---
 
