@@ -1,5 +1,5 @@
 # HR Analytics Case Study
-## by Oliver Roberts
+### by Oliver Roberts
 
 ---
 
