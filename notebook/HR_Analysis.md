@@ -203,9 +203,13 @@ DELETE FROM DuplicateCTE WHERE RowNum > 1;
 
 ### Exploratory Data Analysis
 
-Business Task Q1: How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
+---
 
-Firstly calculating the amount of employees working over 160 hours per month
+**Business Task Q1**
+
+How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
+
+Firstly calculating the amount of employees working both over and under 160 hours per month :
 
 ```sql
 SELECT SUM(CASE WHEN average_monthly_hours > 160 THEN 1 ELSE 0 END) AS over_160_hours,
@@ -215,7 +219,7 @@ FROM dbo.HR_capstone_dataset_copy
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/8ca93da4-8d7b-45fa-ba17-7b49632ad981)
 
-We would then need to create bins for satisfaction_level so that we can group the employees and explore the data
+We would then need to create bins for satisfaction_level so that we can group the employees and explore the data :
 
 ```sql
 ALTER TABLE dbo.HR_capstone_dataset_copy ADD satisfaction_group varchar(50);
@@ -234,7 +238,7 @@ UPDATE dbo.HR_capstone_dataset_copy  SET satisfaction_group =
 END);
 ```
 
-To get an overview of how the employees satisfaction levels are distributed
+To get an overview of how the employees satisfaction levels are distributed :
 
 ```sql
 SELECT satisfaction_group, COUNT(*) AS number_of_employees
@@ -261,7 +265,7 @@ ORDER BY satisfaction_group ASC;
 
 ---
 
-Charts to view the data in a more pallatable means
+Charts to zoom out and view the data in a more pallatable means
 
 ---
 
@@ -273,11 +277,21 @@ A Scatter Plot
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/0b53d511-d8ad-4b08-b868-0679bd3b12fe)
 
+#### Observations
+
+Datapoints are distributed somewhat randomly besides two obvious clusters: 
+
+- Employees working between 120 and 160 hours show a low satisfaction level, suggesting that being underworked is also a contributor to lower satisfaction levels.
+  
+- The other cluster is where employees are working between 240 and 310 hours, which is definitely a result of being overworked.
+
 ---
 
-For Business Task Q2 : Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction?
+**Business Task Q2** 
 
-To observe the job satisfaction level of employees by the number of projects they are working on
+Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction?
+
+To observe the job satisfaction level of employees by the number of projects they are working on :
 
 ```sql
 SELECT AVG(satisfaction_level) AS avg_satisfaction_level, number_project
@@ -292,15 +306,21 @@ A Bar Chart showing Average Satisfaction Level by Number of Projects
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/90b1945c-be0a-493d-b022-312bcfbdc8e5)
 
-  - We can clearly see that when employees are tasked with 7 projects monthly, that there is a massive drop in satisfaction level, and that employees tasked with 6 projects monthly also show a very low satisfaction score. 
 
-  - Employees tasked with 3 or 4 projects record the highest level of satisfaction at an average of 0.69
+
+#### Observations
+
+- We can clearly see that when employees are tasked with 7 projects monthly, that there is a massive drop in satisfaction level, and that employees tasked with 6 projects monthly also show a very low satisfaction score. 
+
+- Employees tasked with 3 or 4 projects record the highest level of satisfaction at an average of 0.69
 
 ---
 
-For business task Q3 : How does time spent at the company affect overall job satisfaction? 
+**Business Task Q3**
 
-First lets have a look into the average satisfaction levels by tenure
+How does time spent at the company affect overall job satisfaction? 
+
+First lets have a look into the average satisfaction levels by tenure :
 
 ```sql
 SELECT time_spend_company, AVG(satisfaction_level) AS avg_satisfaction
@@ -317,7 +337,7 @@ The highest average satisfaction level is observed in employees who have been at
 
  - This may be due to the fact that new employees tend to be excited about joining a company, and have not been exposed to a lengthy term of work in the same business.
 
-To drill down on the low satisfaction level at 4 years tenure, lets look at the promotion ratio for tenures:
+To drill down on the low satisfaction level at 4 years tenure, lets look at the promotion ratio per tenure:
 
 ```sql
 SELECT time_spend_company, 
