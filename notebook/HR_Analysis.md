@@ -267,7 +267,7 @@ Charts to view the data in a more pallatable means
 
 A Pyramid Chart
 
-![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/1d59e3dd-508e-41fb-80d4-b25fa2245ca8)
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/068936da-b5c1-4330-a411-5e8be620dee9)
 
 A Scatter Plot
 
