@@ -277,7 +277,7 @@ A Scatter Plot
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/0b53d511-d8ad-4b08-b868-0679bd3b12fe)
 
-#### Observations
+#### Observations :
 
 Datapoints are distributed somewhat randomly besides two obvious clusters: 
 
@@ -308,9 +308,10 @@ A Bar Chart showing Average Satisfaction Level by Number of Projects
 
 
 
-#### Observations
+#### Observations :
 
-- We can clearly see that when employees are tasked with 7 projects monthly, that there is a massive drop in satisfaction level, and that employees tasked with 6 projects monthly also show a very low satisfaction score. 
+- We can clearly see that when employees are tasked with 7 projects monthly, that there is a massive drop in satisfaction level, and that employees tasked with 
+  6 projects monthly also show a very low satisfaction score. 
 
 - Employees tasked with 3 or 4 projects record the highest level of satisfaction at an average of 0.69
 
@@ -331,11 +332,7 @@ ORDER BY time_spend_company
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/880ccce8-ba14-4cea-9fc5-22750b0575cd)
 
-The lowest average satisfaction level is observed in employees who have been at the company for 4 years.
 
-The highest average satisfaction level is observed in employees who have been at the company for 2 years. 
-
- - This may be due to the fact that new employees tend to be excited about joining a company, and have not been exposed to a lengthy term of work in the same business.
 
 To drill down on the low satisfaction level at 4 years tenure, lets look at the promotion ratio per tenure:
 
@@ -355,9 +352,23 @@ A Bar Chart to show the data in a more visual sense
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/94a77a68-267a-46b0-8ec9-4b331d248796)
 
+#### Observations :
+
+- The lowest average satisfaction level is observed in employees who have been at the company for 4 years.
+
+  - This may be due to employees having worked at the company for 4 years see only a promotion ratio of 1.10%, with average satisfaction climbing from 5 years 
+    up and promotion ratio climbing from 6 years and up. 
+
+- The highest average satisfaction level is observed in employees who have been at the company for 2 years. 
+
+  - This may be due to the fact that new employees tend to be excited about joining a company, and have not been exposed to a lengthy term of being overworked 
+    in the same business.
+
 ---
 
-For business task Q4 : How many employees experienced work accidents and left the company? How many stayed?
+**Business task Q4**
+
+How many employees experienced work accidents and left the company? How many stayed?
 
 ```sql
 SELECT 
@@ -383,8 +394,6 @@ FROM dbo.HR_capstone_dataset_copy;
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/33fe8ab7-940b-4199-aaf5-fb54e7f13ca6)
 
-- Based on the very low percentage of 6%, it seems like workplace accidents are not a major factor in employees leaving the company.
-
 A calculation to determine the ratio of employees who experienced a workplace accident during their tenure:
 
 ```sql
@@ -397,7 +406,13 @@ FROM dbo.HR_capstone_dataset_copy
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/a95a654e-fa8d-4cce-bed5-f78297804397)
 
-- With work place accidents coming in at a percentage of 15.4% of all employees, which is roughly one in 6 people, this is no doubt a serious problem and workplace safety would need a complete overhaul to reduce the number of accidents.
+
+
+#### Observations
+
+- Based on the very low percentage of 6% of employees leaving the company after a workplace accident, it surprisingly seems like workplace accidents are not a major factor in employees leaving the company.
+
+- With work place accidents coming in at a percentage of 15.4% of all employees, which is roughly one in 6 people, this is no doubt a serious problem
 
 ---
 
