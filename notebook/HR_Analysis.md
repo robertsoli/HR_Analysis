@@ -263,11 +263,7 @@ ORDER BY satisfaction_group ASC;
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/46e2b601-585b-4f74-bc2f-741e56f5d490)
 
----
-
-Charts to zoom out and view the data in a more pallatable means
-
----
+Charts to zoom out and view the data in a more pallatable means :
 
 A Pyramid Chart
 
