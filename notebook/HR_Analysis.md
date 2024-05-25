@@ -418,9 +418,9 @@ FROM dbo.HR_capstone_dataset_copy
 
 ---
 
-**Business task Q5**
+#### Business task Q5
 
-How does a promotion affect employee retention?
+**How does a promotion affect employee retention?**
 
 Looking at the number of employees who have left the company without receiving a promotion, and the amount of employees who left after receiving a promotion would be of use in this scenario: 
 
@@ -437,7 +437,7 @@ GROUP BY
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/2d6a0d01-5388-4d12-8f5b-78832c25a741)
 
-To dig a bit deeper into the reasons behind the 8 employees who left despite receiving a promotion, we could have a look at a table of those 8 records: 
+To dig a bit deeper into the reasons behind the 8 employees who left despite receiving a promotion, we could draw up a table of those 8 records: 
 
 ```sql
 SELECT *
@@ -453,10 +453,17 @@ WHERE left_company = 1 AND promotion_last_5years = 1
 
 - 1983 employees left the company without a promotion, and although this could be for a plethora of other reasons, employee retention is definitely higher after receiving a promotion.
 
+- Looking for trends between these 8 employees, we could possibly relate their departure to :
+
+  - Low satisfaction level due to working on 2 or 6 projects which accounts for 6 records
+  - Extremely high monthly hour count, as seen in 2 records
+  - Low and medium salaries as seen in all the records
 
 ---
 
-For business task Q6 : Are there particular departments that have a higher rate of attrition?
+#### Business task Q6 
+
+**Are there particular departments that have a higher rate of attrition?**
 
 Here we break down the count of employees who left the department, the total number of active employees in the department, and the percentage of employees who left the company: 
 
