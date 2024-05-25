@@ -563,7 +563,7 @@ It would be useful to determine the number of employees that fall into different
 ```sql
 SELECT 
     department,
-	total_employees,
+    total_employees,
     low_salary_count, 
     medium_salary_count, 
     high_salary_count, 
@@ -572,12 +572,12 @@ SELECT
 	CAST(high_salary_count AS DECIMAL) / total_employees * 100 AS high_percentage
 FROM (
     SELECT 
-        department,
-		COUNT(*) AS total_employees,
-SUM(CASE WHEN salary = 'low' THEN 1 ELSE 0 END) AS low_salary_count,
-SUM(CASE WHEN salary = 'medium' THEN 1 ELSE 0 END) AS medium_salary_count,
-SUM(CASE WHEN salary = 'high' THEN 1 ELSE 0 END) AS high_salary_count
-    FROM 
+    department,
+    COUNT(*) AS total_employees,
+    SUM(CASE WHEN salary = 'low' THEN 1 ELSE 0 END) AS low_salary_count,
+    SUM(CASE WHEN salary = 'medium' THEN 1 ELSE 0 END) AS medium_salary_count,
+    SUM(CASE WHEN salary = 'high' THEN 1 ELSE 0 END) AS high_salary_count
+FROM 
         dbo.HR_capstone_dataset_copy
 GROUP BY department
 )
