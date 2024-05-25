@@ -1,4 +1,5 @@
-# HR Analytics Case Study by Oliver Roberts
+# HR Analytics Case Study
+## by Oliver Roberts
 
 ---
 
@@ -56,6 +57,8 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 ---
 
 ### Data Cleaning 
+
+- Create a copy of the dataset that will be cleaned and manipulated, so that the raw data is still in tact
 
 - Data formats were corrected on import to MS Sql Server Management Studio
 
@@ -181,7 +184,8 @@ ORDER BY duplicates DESC;
 WITH DuplicateCTE AS
 (
 SELECT *,
-  ROW_NUMBER() OVER (PARTITION BY satisfaction_level, last_evaluation, number_project, average_monthly_hours, time_spend_company, work_accident, left_company,    promotion_last_5years, department, salary
+  ROW_NUMBER() OVER (PARTITION BY satisfaction_level, last_evaluation, number_project, average_monthly_hours, time_spend_company, work_accident, left_company,    
+                                  promotion_last_5years, department, salary
 ORDER BY (SELECT NULL)) AS RowNum
 FROM HR_capstone_dataset
 )
@@ -204,12 +208,12 @@ Business Task Q1: How many employees are working more than the standard 160 hour
 Firstly calculating the amount of employees working over 160 hours per month
 
 ```sql
-SELECT COUNT(*) AS over_160_hours
-  FROM dbo.HR_capstone_dataset
-  WHERE average_monthly_hours > 160
+SELECT SUM(CASE WHEN average_monthly_hours > 160 THEN 1 ELSE 0 END) AS over_160_hours,
+       SUM(CASE WHEN average_monthly_hours <= 160 THEN 1 ELSE 0 END) AS under_160_hours
+FROM dbo.HR_capstone_dataset_copy
 ```
 
-![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/26e49c0b-11a6-46b3-94b1-b83f6dd49eea)
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/8ca93da4-8d7b-45fa-ba17-7b49632ad981)
 
 We would then need to create bins for satisfaction_level so that we can group the employees and explore the data
 
@@ -563,7 +567,7 @@ It would be useful to determine the number of employees that fall into different
 ```sql
 SELECT 
     department,
-    total_employees,
+	total_employees,
     low_salary_count, 
     medium_salary_count, 
     high_salary_count, 
@@ -572,12 +576,12 @@ SELECT
 	CAST(high_salary_count AS DECIMAL) / total_employees * 100 AS high_percentage
 FROM (
     SELECT 
-    department,
-    COUNT(*) AS total_employees,
-    SUM(CASE WHEN salary = 'low' THEN 1 ELSE 0 END) AS low_salary_count,
-    SUM(CASE WHEN salary = 'medium' THEN 1 ELSE 0 END) AS medium_salary_count,
-    SUM(CASE WHEN salary = 'high' THEN 1 ELSE 0 END) AS high_salary_count
-FROM 
+        department,
+		COUNT(*) AS total_employees,
+SUM(CASE WHEN salary = 'low' THEN 1 ELSE 0 END) AS low_salary_count,
+SUM(CASE WHEN salary = 'medium' THEN 1 ELSE 0 END) AS medium_salary_count,
+SUM(CASE WHEN salary = 'high' THEN 1 ELSE 0 END) AS high_salary_count
+    FROM 
         dbo.HR_capstone_dataset_copy
 GROUP BY department
 )
@@ -589,6 +593,7 @@ AS subquery;
 Based on the size differences in the number of employees in each department, the distribution is best viewed as a percentage in a bar chart form:
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/31933571-6ac8-4891-bfe6-2ad917e57afc)
+
 
 
 
