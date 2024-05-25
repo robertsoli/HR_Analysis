@@ -81,5 +81,5 @@ All cleaning and manipulation tasks were done in Microsoft Sql Server Management
 
 The following [dataset](https://www.kaggle.com/datasets/raminhuseyn/hr-analytics-data-set) was obtained on the platform Kaggle, made public by the [owner](https://www.kaggle.com/raminhuseyn)
 
-The dataset was taken from Google Data Analysis course (https://www.coursera.org/professional-certificates/google-advanced-data-analytics?) by the owner. 
+The dataset was taken from Google Data Analysis course (https://www.coursera.org/professional-certificates/google-advanced-data-analytics) by the owner. 
    
