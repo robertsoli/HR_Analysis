@@ -479,15 +479,21 @@ ORDER BY left_company DESC
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/495fe4ff-9784-4e5d-b5a4-be94bfdb7dcd)
 
- - Although the Sales department had the higher count of employees who left the company, this is due to it being the largest department overall. Percentage wise, there is not a department with a significantly higher rate of attrition than others. Both RND and Management have the lowest rate of attrition, coming in at 13%. 
-
 And a horizontal bar chart to vizualise the data
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/af5ee1cb-5b15-4f5a-bbcd-5bb5170c8ac7)
 
+#### Observations
+
+ - Although the Sales department had the higher count of employees who left the company, this is due to it being the largest department overall. Percentage 
+   wise, there is not a department with a significantly higher rate of attrition than others. Both RND and Management have the lowest rate of attrition, coming 
+   in at 13%. 
+
 ---
 
-For business task Q7 : Which departments show the highest performance review score for active employees? Which departments show the lowest?
+#### Business task Q7
+
+**Which departments show the highest performance review score for active employees? Which departments show the lowest?**
 
 For this query, it would be useful to create bins of 10% each, and view the performance evaluation counts in those bins, by department:
 
@@ -513,11 +519,11 @@ ORDER BY total_active_employees DESC;
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/caacc4c3-9f61-4916-966a-952b82c28dd9)
 
-Based on the amount of data in the table, it would be more useful to view it in a chart to look for trends :
-
-Blend of a heat map and a bar chart
+Based on the amount of data in the table, it would be more useful to view it as a a bar chart :
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/be54e415-7013-4777-87e5-5f44db0d4d0b)
+
+#### Observations
 
 - Although this chart feels cramped, it does make it easier to draw the following conclusions:
   - At 18%, HR comes in with the highest number of employees receiving a 90-100% performance review, as well as 55.5% of the department scoring 70% or more in evaluation score. 
@@ -525,11 +531,15 @@ Blend of a heat map and a bar chart
  
 ---
 
-For business task Q8 : How do monthly working hours influence performance scores?
+#### Business task Q8
+
+**How do monthly working hours influence performance scores?**
 
 Based on the amount of data points, a Highlight Table would be best :
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/b2cd3cab-7d93-479a-be23-cb1ef7bba935)
+
+#### Observations
 
 Should higher working hours be a strong indicator of poor performance evaluation scores, we would expect to see a cluster of employees in the lower performance bins over the 160 hours per month mark, but that is not the case. Observations :
 
@@ -543,7 +553,9 @@ Overall, it seems that employees working more than 160 hours per month are getti
 
 ---
 
-For business question Q9 : Does project count contribute to employee attrition?
+#### Business task Q9 
+
+**Does project count contribute to employee attrition?**
 
 In order to get a view of the employees who left the company grouped by the number of projects they were working on : 
 
@@ -582,7 +594,9 @@ Based on the data, the following observations can be made:
 
 ---
 
-For business task Q10 : Are certain departments assigned more projects than others?
+#### Business task Q10
+
+**Are certain departments assigned more projects than others?**
 
 Lets create a table for the departments, their average number of projects, and a count of the number of projects per department: 
 
@@ -612,7 +626,9 @@ Based on the data, we can make the following observations:
 
 ---
 
-For business task Q11 :  How do evaluation scores fluctuate with salary brackets? 
+#### Business task Q11 
+
+**How do evaluation scores fluctuate with salary brackets?**
 
 For the purpose of viewing these data, a visualization is the simplest way to look for any trends, so a Bar Chart gave the best visual cues:
 
@@ -620,7 +636,9 @@ For the purpose of viewing these data, a visualization is the simplest way to lo
 
 ---
 
-For business task Q12 : How are salary brackets distributed per department? 
+#### Business task Q12
+
+**How are salary brackets distributed per department?**
 
 It would be useful to determine the number of employees that fall into different salary brackets, and the percentage thereof : 
 
