@@ -313,7 +313,7 @@ A Bar Chart showing Average Satisfaction Level by Number of Projects
 - We can clearly see that when employees are tasked with 7 projects monthly, that there is a massive drop in satisfaction level, and that employees tasked with 
   6 projects monthly also show a very low satisfaction score. 
 
-- Employees tasked with 3 or 4 projects record the highest level of satisfaction at an average of 0.69
+- Employees tasked with 3, 4 and 5 projects record the highest level of satisfaction at an average of 0.69
 
 ---
 
@@ -364,6 +364,8 @@ A Bar Chart to show the data in a more visual sense
   - This may be due to the fact that new employees tend to be excited about joining a company, and have not been exposed to a lengthy term of being overworked 
     in the same business.
 
+- Employees working at the company for 6 years plus show a consistent upward trend in satisfaction level.
+
 ---
 
 **Business task Q4**
@@ -412,11 +414,13 @@ FROM dbo.HR_capstone_dataset_copy
 
 - Based on the very low percentage of 6% of employees leaving the company after a workplace accident, it surprisingly seems like workplace accidents are not a major factor in employees leaving the company.
 
-- With work place accidents coming in at a percentage of 15.4% of all employees, which is roughly one in 6 people, this is no doubt a serious problem
+- With work place accidents coming in at a percentage of 15.4% of all employees, which is roughly one in 6 people, this is no doubt a serious problem.
 
 ---
 
-For business task Q5 : How does a promotion affect employee retention?
+**Business task Q5**
+
+How does a promotion affect employee retention?
 
 Looking at the number of employees who have left the company without receiving a promotion, and the amount of employees who left after receiving a promotion would be of use in this scenario: 
 
@@ -433,8 +437,22 @@ GROUP BY
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/2d6a0d01-5388-4d12-8f5b-78832c25a741)
 
+To dig a bit deeper into the reasons behind the 8 employees who left despite receiving a promotion, we could have a look at a table of those 8 records: 
+
+```sql
+SELECT *
+FROM dbo.HR_capstone_dataset_copy
+WHERE left_company = 1 AND promotion_last_5years = 1
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/0e946a4e-bd8d-4a1b-a791-255086dbced5)
+
+#### Observations
+
 - Based on the result set, only 8 employees out of 203 left after receiving a promotion.
+
 - 1983 employees left the company without a promotion, and although this could be for a plethora of other reasons, employee retention is definitely higher after receiving a promotion.
+
 
 ---
 
