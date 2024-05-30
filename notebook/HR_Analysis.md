@@ -344,6 +344,18 @@ ORDER BY time_spend_company
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/589e6fed-2f1d-4461-8f59-6d368ddc1630)
 
+And having a look at the average monthly hours that employees are working, as well as the average evaluation score, at the 4 year mark:
+
+```sql
+SELECT time_spend_company,
+	   AVG(average_monthly_hours) AS avg_monthly,
+	   AVG(last_evaluation) AS avg_eval
+FROM dbo.HR_capstone_dataset_copy
+GROUP BY time_spend_company
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/e2648a96-8080-4776-9e1b-0740b1980b70)
+
 A Bar Chart to show the data in a more visual sense
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/94a77a68-267a-46b0-8ec9-4b331d248796)
@@ -517,7 +529,7 @@ ORDER BY total_active_employees DESC;
 
 Based on the amount of data in the table, it would be more useful to view it as a a bar chart :
 
-![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/be54e415-7013-4777-87e5-5f44db0d4d0b)
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/2482237b-a27d-4509-945e-616e23f25f0e)
 
 #### Observations
 
@@ -667,6 +679,64 @@ AS subquery;
 Based on the size differences in the number of employees in each department, the distribution is best viewed as a percentage in a bar chart form:
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/31933571-6ac8-4891-bfe6-2ad917e57afc)
+
+---
+
+### Suggestions:
+
+- To tie the original aim of this case study to the business tasks we have outlined, below will be a set of recommendations for each business task
+
+---
+
+**Q1**
+
+How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
+
+Datapoints are distributed somewhat randomly besides two obvious clusters, employees working between 120 and 160 hours show a low satisfaction level, suggesting that being underworked is also a contributor to lower satisfaction levels. The other cluster is where employees are working between 240 and 310 hours, which is definitely a result of being overworked.
+
+Suggestions are as follows: 
+
+- With almost 73% of employees working over 160 hours per month, Salifort motors should restructure the workload in order to raise satisfaction levels and improve employee retention.
+
+- Similarly, employees working less than 160 hours also have a lower satisfaction level 
+
+- Both these problem areas can be improved by redistributing working hours from the overworked employees to the underworked employees.
+
+---
+
+**Q2** 
+
+Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction?
+
+The data shows that this is a large contributor to employee attrition, with a definite correlation between too few or too many projects and employee attrition. 
+
+Suggestions are as follows:
+
+- Where applicable, assign projects from employees who have 6 projects to employees who have 2 or 3 projects, which should reduce attrition in both 2 and 6 project cases. 
+
+- Never have an employee work on 7 projects as it is a guarantee that they will leave the company
+
+- Aim to assign 3, 4 or 5 projects per employee.
+
+---
+
+**Q3**
+
+How does time spent at the company affect overall job satisfaction? 
+
+With employee satisfaction dropping from the 2 year tenure mark to the lowest point at 4 years, it would be advised to look for answers at the 4 year tenure mark.  
+
+To combat the low satisfaction score at the 4 year mark: 
+
+- Consider promoting employees who have a very high performance evaluation score at the 3 year mark.
+
+- 215 average monthly hours, which is the second highest in its category, for employees who have 4 years tenure is a likely contributor to low satisfaction levels. Ensuring again that employees are working monthly hours that are closer to a total of 160 should improve job satisfaction, and reduce the likelihood of employees burning themselves out.
+
+- An Average Evaluation Score of 0.75 at 4 years tenure is also second highest in this category, meaning that employees are working very effectively despite longer than average hours and receiving less promotions on average. Again suggesting that promotions are considered for employees who have high evaluation scores at the 3 or 4 year mark should improve job satisfaction.
+
+---
+
+**Q4**
 
 
 
