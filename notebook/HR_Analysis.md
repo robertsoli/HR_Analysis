@@ -428,9 +428,9 @@ ORDER BY total_accidents DESC
 
 ---
 
-#### Business task Q5
+**Business task Q5**
 
-**How does a promotion affect employee retention?**
+How does a promotion affect employee retention?
 
 Looking at the number of employees who have left the company without receiving a promotion, and the amount of employees who left after receiving a promotion would be of use in this scenario: 
 
@@ -744,6 +744,16 @@ How many employees experienced work accidents and left the company? How many sta
 
 With workplace accidents being as common as 1 in 6 employees, the following suggestions are made:
 
-- 
+- Every department is experiencing roughly the same amount of accidents, so workplace safety needs to be investigated and drastically improved.
+
+- Although a very low percentage of employees left the company after experiencing a workplace accident, it could be the main contributing factor to the 6% of staff that did experience an accident and left the company, which would not be the case if there was a higher regard for workplace safety.
+
+---
+
+**Q5**
+
+How does a promotion affect employee retention?
+
+
 
 
