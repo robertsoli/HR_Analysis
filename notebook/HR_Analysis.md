@@ -404,25 +404,27 @@ FROM dbo.HR_capstone_dataset_copy;
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/33fe8ab7-940b-4199-aaf5-fb54e7f13ca6)
 
-A calculation to determine the ratio of employees who experienced a workplace accident during their tenure:
+Determine the ratio of employees who experienced a workplace accident during their tenure, by department :
 
 ```sql
-SELECT
-COUNT(*) AS count_of_employees,
-SUM(CASE WHEN work_accident = 1 THEN 1 ELSE 0 END) AS work_accidents,
-(SUM(CASE WHEN work_accident = 1 THEN 1 ELSE 0 END)* 100) / NULLIF(COUNT(*),0) AS percentage_of_accidents
+SELECT department,
+	COUNT(*) AS total_employees,
+	SUM(work_accident) AS total_accidents,
+	(SUM(CASE WHEN work_accident = 1 THEN 1 ELSE 0 END)* 100) / NULLIF(COUNT(*),0) AS percentage_of_accidents
 FROM dbo.HR_capstone_dataset_copy
+GROUP BY department
+ORDER BY total_accidents DESC
 ```
 
-![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/a95a654e-fa8d-4cce-bed5-f78297804397)
-
-
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/9a3bac45-e16d-464b-865f-b85a6375ec45)
 
 #### Observations
 
 - Based on the very low percentage of 6% of employees leaving the company after a workplace accident, it surprisingly seems like workplace accidents are not a major factor in employees leaving the company.
 
-- With work place accidents coming in at a percentage of 15.4% of all employees, which is roughly one in 6 people, this is no doubt a serious problem.
+- With work place accidents coming in at a percentage of 15.4% of all employees, which is roughly one in 6 people.
+
+- No particular department shows a significantly greater amount of work place accident occurences. 
 
 ---
 
@@ -738,6 +740,10 @@ To combat the low satisfaction score at the 4 year mark:
 
 **Q4**
 
+How many employees experienced work accidents and left the company? How many stayed?
 
+With workplace accidents being as common as 1 in 6 employees, the following suggestions are made:
+
+- 
 
 
