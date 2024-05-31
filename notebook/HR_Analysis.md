@@ -754,6 +754,11 @@ With workplace accidents being as common as 1 in 6 employees, the following sugg
 
 How does a promotion affect employee retention?
 
+Suggestions are as follows: 
+
+- 99.6% of employees who left the company, did so without a promotion. Although there would be other reasons for some of these employees, it is without a doubt a contributing factor to employee attrition.
+  
+- 3.94% of employees leaving the company after getting promoted is 
 
 
 
