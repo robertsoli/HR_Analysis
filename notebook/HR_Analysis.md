@@ -756,9 +756,17 @@ How does a promotion affect employee retention?
 
 Suggestions are as follows: 
 
-- 99.6% of employees who left the company, did so without a promotion. Although there would be other reasons for some of these employees, it is without a doubt a contributing factor to employee attrition.
-  
-- 3.94% of employees leaving the company after getting promoted is 
+- 99.6% of employees who left the company did so without a promotion. Although there would be other reasons for some of these employees, it is without a doubt a contributing factor to employee attrition.
+
+- 96% of employees who received a promotion remained at the company. 
+
+- With 203 total promotions, or 1.7%, out of the 11991 workforce, the number of promotions being given is far too low. Citing [SHRM](https://en.wikipedia.org/wiki/Society_for_Human_Resource_Management), the industry average for a manufacturing company is 6%.
+
+Based on this information, Salifort Motors should review their organizational structure and create additional roles for employees who score a high evaluation score.
+
+---
+
+**Q6**
 
 
 
