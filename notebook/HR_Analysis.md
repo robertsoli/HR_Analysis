@@ -744,7 +744,7 @@ How many employees experienced work accidents and left the company? How many sta
 
 With workplace accidents being as common as 1 in 6 employees, the following suggestions are made:
 
-- Every department is experiencing roughly the same amount of accidents, so workplace safety needs to be investigated and drastically improved.
+- Every department is experiencing roughly the same amount of accidents, so workplace safety needs to be investigated and drastically improved in every department.
 
 - Although a very low percentage of employees left the company after experiencing a workplace accident, it could be the main contributing factor to the 6% of staff that did experience an accident and left the company, which would not be the case if there was a higher regard for workplace safety.
 
@@ -754,13 +754,13 @@ With workplace accidents being as common as 1 in 6 employees, the following sugg
 
 How does a promotion affect employee retention?
 
-Suggestions are as follows: 
-
 - 99.6% of employees who left the company did so without a promotion. Although there would be other reasons for some of these employees, it is without a doubt a contributing factor to employee attrition.
 
 - 96% of employees who received a promotion remained at the company. 
 
 - With 203 total promotions, or 1.7%, out of the 11991 workforce, the number of promotions being given is far too low. Citing [SHRM](https://en.wikipedia.org/wiki/Society_for_Human_Resource_Management), the industry average for a manufacturing company is 6%.
+
+Suggestions are as follows: 
 
 Based on this information, Salifort Motors should review their organizational structure and create additional roles for employees who score a high evaluation score.
 
@@ -768,5 +768,25 @@ Based on this information, Salifort Motors should review their organizational st
 
 **Q6**
 
+Are there particular departments that have a higher rate of attrition?
 
+There are no notable differences in the attrition rate between departments, and as of such it is safe to include that there is not a "problem" department that should receive more focus. 
+
+Suggestions are as follows: 
+
+- Investigate other possible causes for attrition, as outlined in the other business tasks. 
+
+--- 
+
+**Q7**
+
+Which departments show the highest performance review score for active employees? Which departments show the lowest?
+
+With HR scoring highest for performance, and Product Management the lowest, the following suggestions are made: 
+
+- Set meetings with underperforming staff members to determine the main reasons for their low performance.
+
+- Conduct training for employees who score under the 0.50 range of evaluation scores.
+
+- Centre bonuses around employees who score in excess of 0.80 on their evaluation scores to reward deserved employees.
 
