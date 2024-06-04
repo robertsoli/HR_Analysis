@@ -770,7 +770,7 @@ Based on this information, Salifort Motors should review their organizational st
 
 Are there particular departments that have a higher rate of attrition?
 
-There are no notable differences in the attrition rate between departments, and as of such it is safe to include that there is not a "problem" department that should receive more focus. 
+There are no notable differences in the attrition rate between departments, and as of such it is safe to assume that there is not a "problem" department that should receive more focus. 
 
 Suggestions are as follows: 
 
@@ -789,4 +789,10 @@ With HR scoring highest for performance, and Product Management the lowest, the 
 - Conduct training for employees who score under the 0.50 range of evaluation scores.
 
 - Centre bonuses around employees who score in excess of 0.80 on their evaluation scores to reward deserved employees.
+
+---
+
+**Q8**
+
+How do monthly working hours influence performance scores?
 
