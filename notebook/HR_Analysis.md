@@ -549,6 +549,41 @@ Based on the amount of data points, a Highlight Table would be best :
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/b2cd3cab-7d93-479a-be23-cb1ef7bba935)
 
+Investigating the 140-150 hour, 50-60% evaluation cluster:
+
+```sql
+SELECT department, 
+	   employee_count,
+	   avg_satisfaction,
+	   two_projects,
+	   six_projects,
+	   seven_projects,
+	   CAST(two_projects AS DECIMAL) / employee_count * 100 AS two_projects_percentage
+FROM (
+	SELECT
+	department, 
+COUNT(*) AS employee_count,
+AVG(satisfaction_level) AS avg_satisfaction,
+COUNT(CASE WHEN number_project = 2 THEN 1 ELSE NULL END) AS two_projects,
+COUNT(CASE WHEN number_project = 6 THEN 1 ELSE NULL END) AS six_projects,
+COUNT(CASE WHEN number_project = 7 THEN 1 ELSE NULL END) AS seven_projects
+FROM 
+	dbo.HR_capstone_dataset_copy
+WHERE 
+	evaluation_group = '50-60%' AND
+	average_monthly_hours BETWEEN 140 AND 150
+GROUP BY 
+	department
+) AS subquery;
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/5dea881f-4498-4774-84d9-15a8da114279)
+
+Investigating the 260-270 hour, 80-90% cluster:
+
+```sql
+
+
 #### Observations
 
 Should higher working hours be a strong indicator of poor performance evaluation scores, we would expect to see a cluster of employees in the lower performance bins over the 160 hours per month mark, but that is not the case. Observations :
