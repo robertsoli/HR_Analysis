@@ -755,7 +755,7 @@ Based on the size differences in the number of employees in each department, the
 
 ---
 
-**Q1**
+**Business Task Q1**
 
 How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
 
@@ -771,7 +771,7 @@ Suggestions are as follows:
 
 ---
 
-**Q2** 
+**Business Task Q2** 
 
 Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction?
 
@@ -787,7 +787,7 @@ Suggestions are as follows:
 
 ---
 
-**Q3**
+**Business Task Q3**
 
 How does time spent at the company affect overall job satisfaction? 
 
@@ -803,7 +803,7 @@ To combat the low satisfaction score at the 4 year mark:
 
 ---
 
-**Q4**
+**Business Task Q4**
 
 How many employees experienced work accidents and left the company? How many stayed?
 
@@ -815,7 +815,7 @@ With workplace accidents being as common as 1 in 6 employees, the following sugg
 
 ---
 
-**Q5**
+**Business Task Q5**
 
 How does a promotion affect employee retention?
 
@@ -831,7 +831,7 @@ Based on this information, Salifort Motors should review their organizational st
 
 ---
 
-**Q6**
+**Business Task Q6**
 
 Are there particular departments that have a higher rate of attrition?
 
@@ -843,7 +843,7 @@ Suggestions are as follows:
 
 --- 
 
-**Q7**
+**Business Task Q7**
 
 Which departments show the highest performance review score for active employees? Which departments show the lowest?
 
@@ -857,7 +857,7 @@ With HR scoring highest for performance, and Product Management the lowest, the 
 
 ---
 
-**Q8**
+**Business Task Q8**
 
 How do monthly working hours influence performance scores?
 
@@ -870,7 +870,7 @@ To make the biggest difference to overall evaluation scores, we would look into 
  
 ---
 
-**Q9**
+**Business Task Q9**
 
 Does project count contribute to employee attrition?
 
@@ -887,7 +887,7 @@ Suggestions are as follows:
 
 ---
 
-**Q10, Q11 and Q12**
+**Business Tasks Q10, Q11 and Q12**
 
 The remaining three business questions did not yield actionable insights, all the data was distributed somewhat evenly and hence there are no suggestions to be made for these remaining questions.
 
