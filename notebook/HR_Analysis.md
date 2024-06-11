@@ -878,17 +878,14 @@ Suggestions are as follows:
 
 ---
 
-**Q10**
+**Q10, Q11 and Q12**
 
-Are certain departments assigned more projects than others?
-
-After investigating the data, we found that there is no significant difference in the number of projects assigned departmentally.
-
-Thus the only recommendation is to ensure that employees in all departments be assigned 3, 4 or 5 projects.
+The remaining three business questions did not yield actionable insights, all the data was distributed somewhat evenly and hence there are no suggestions to be made for these remaining questions.
 
 ---
 
-**Q11**
+#### Conclusion:
+
 
 
 
