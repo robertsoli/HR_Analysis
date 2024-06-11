@@ -3,13 +3,13 @@
 
 ---
 
-### Project Overview
+## Project Overview
 
 The aim of this case study is to determine possible reasons for employee dissatisfaction and attrition at the fictional French company Salifort Motors. We'll define business tasks, perform exploratory analysis, create accompanying charts followed by a dashboard, and produce recommendations with an aim to improve employee satisfaction at the company, and reduce attrition.
 
 ---
 
-### Defining the business problems
+## Defining the business problems
 
 - What are the reasons behind employee attrition, and how can Salifort Motors improve their employee retention rate?
 - What are the reasons behind employee dissatisfaction, and how can Salifort Motors improve overall job satisfaction for their employees?
@@ -17,39 +17,39 @@ The aim of this case study is to determine possible reasons for employee dissati
 
 ---
 
-### Defining the business questions
+## Defining the business tasks
 
 By performing exploratory data analysis, the answers to these questions will aid us in providing recommendations to solve the original business problems outlined above.
 
-**Q1** : How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
+**1** : How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
 
 Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked#:~:text=The%20Act%20requires%20that%20employees,pay%20for%20the%20overtime%20hours.) from the US Department of Labor on recommended monthly working hours.
 
-**Q2** : Is there a relationship between the number of projects employees are assigned, and overall job satisfaction?
+**2** : Is there a relationship between the number of projects employees are assigned, and overall job satisfaction?
 
-**Q3** : How does time spent at the company affect overall job satisfaction?
+**3** : How does time spent at the company affect overall job satisfaction?
 
-**Q4** : How many employees experienced work accidents and left the company? How many stayed?
+**4** : How many employees experienced work accidents and left the company? How many stayed?
 
-**Q5** : How does a promotion affect employee retention?
+**5** : How does a promotion affect employee retention?
 
-**Q6** : Are there particular departments that have a higher rate of attrition?
+**6** : Are there particular departments that have a higher rate of attrition?
 
-**Q7** : Which departments show the highest performance review score for active employees? Which departments show the lowest?
+**7** : Which departments show the highest performance review score for active employees? Which departments show the lowest?
 
-**Q8** : How do monthly working hours influence performance scores?
+**8** : How do monthly working hours influence performance scores?
 
-**Q9** : Does project count contribute to employee attrition?
+**9** : Does project count contribute to employee attrition?
 
-**Q10** : Are certain departments assigned more projects than others?
+**10** : Are certain departments assigned more projects than others?
 
-**Q11** : How do evaluation scores fluctuate with salary brackets? 
+**11** : How do evaluation scores fluctuate with salary brackets? 
 
-**Q12** : How are salary brackets distributed per department? 
+**12** : How are salary brackets distributed per department? 
 
 ---
 
-### Data Sources
+## Data Sources
 
 - This publicly available data was obtained on Kaggle [here](https://www.kaggle.com/datasets/raminhuseyn/hr-analytics-data-set)
 
@@ -59,14 +59,14 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 ---
 
-### Tools used in analysis
+## Tools used in analysis
 
 - Microsoft SQL Server Management Studio 20, using T-SQL for cleaning tasks, data manipulation and exploratory data analysis
 - Tableau for related charts and a dashboard
 
 ---
 
-### Data Cleaning 
+## Data Cleaning 
 
 - Create a copy of the dataset that will be cleaned and manipulated, so that the raw data is still intact
 
@@ -78,13 +78,15 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 ---
 
-### Data Manipulation
+## Data Manipulation
 
 - Renaming of variables
 
 - Creating aggregations of numeric data as new variables
 
 ---
+
+### Beginning with the cleaning phase
 
 #### Renaming variables to follow naming conventions
 
@@ -209,7 +211,7 @@ DELETE FROM DuplicateCTE WHERE RowNum > 1;
 
 ---
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 
 ---
 
@@ -747,7 +749,7 @@ Based on the size differences in the number of employees in each department, the
 
 ---
 
-### Suggestions:
+## Suggestions:
 
 - To tie the original aim of this case study to the business tasks we have outlined, below will be a set of recommendations for each business task
 
@@ -891,7 +893,7 @@ The remaining three business questions did not yield actionable insights, all th
 
 ---
 
-#### Conclusion:
+## Conclusion:
 
 
 
