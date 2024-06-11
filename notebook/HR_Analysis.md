@@ -608,14 +608,8 @@ ORDER BY avg_satisfaction DESC
 
 Should higher working hours be a strong indicator of poor performance evaluation scores, we would expect to see a cluster of employees in the lower performance bins over the 160 hours per month mark, but that is not the case :
 
-  - There is a cluster of employees with performance evaluations between 40 and 60%, when working between 140 to 150 hours per month.
-  - There is a cluster of employees with performance evaluations between 80 and 100%, when working between 240 to 260 hours per month.
-
-Overall, it seems that employees working more than 160 hours per month are getting higher evaluation scores, this may be due to the following reasons:
-
- - The majority of employees in this evaluation bracket are working between 3 and 5 projects.
- - The company places a high value on employees who work more than the standard amount, thus the higher performance scores for employees working in excess of 160 hours per month.
- - Employees may be paid overtime, resulting in higher motivation to work longer hours monthly at a high level of performance.
+  - There is a cluster of employees with low performance evaluations between 40 and 60%, when working between 130 to 150 hours per month and on average are being assigned too few projects.
+  - There is a cluster of employees with high performance evaluations between 80 and 100%, when working between 240 to 260 hours per month and on average are being assigned 3, 4 or 5 projects.
 
 ---
 
@@ -682,7 +676,7 @@ ORDER BY seven_projects DESC
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/357c6097-2633-4e82-b34a-7fabd0031ab6)
 
-Based on the data, we can make the following observations: 
+#### Observations: 
 
 - There is no significant difference in the average number of projects being assigned for any department
 - Based on the size of the sales department, the numbers are obviously higher for employees assigned a problematic number of projects, but in reality the ratio is almost exactly the same with all the other departments.
@@ -699,6 +693,12 @@ Based on the data, we can make the following observations:
 For the purpose of viewing these data, a visualization is the simplest way to look for any trends, so a Bar Chart gave the best visual cues:
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/12f0b5d4-02e7-4b62-bc52-a8295c46fe8a)
+
+#### Observations: 
+
+If a low salary was correlated to a low evaluation score, we would expect to see a higher percentage of employees who received a low salary to fall into the lower evaluation brackets. 
+
+The data here does not support this, as the distribution is similar across all salary brackets and evaluation bins. There is a slightly higher percentage of employees who score between 0.6 and 0.8 on their evaluation scores, who are being paid a high salary, but not so much that it could drive decision making differently. 
 
 ---
 
@@ -851,4 +851,44 @@ With HR scoring highest for performance, and Product Management the lowest, the 
 **Q8**
 
 How do monthly working hours influence performance scores?
+
+To make the biggest difference to overall evaluation scores, we would look into the cluster of underperforming employees and provide the following recommendations to emulate the higher performing cluster :
+
+- Assign more projects to the employees who are working only two projects, which would in turn bring up the monthly average hours these employees are working, whilst keeping in mind:
+
+  - The number of projects being assigned is no more than 5 per employee
+  - These employees should not work over 260 hours per month
+ 
+---
+
+**Q9**
+
+Does project count contribute to employee attrition?
+
+- 100% of employees who were assigned to 7 Projects left the company
+- 45% of employees who were assigned to 6 projects left the company
+- 54% of employees who were assigned to 2 projects left the company
+
+In line with job satisfaction levels per number of projects shown in Q2 of this analysis, employees leaving the company based on the number of projects they are on also shows a definite relationship and actionable insights.
+
+Suggestions are as follows:
+
+- Assign employees 3, 4 or 5 projects to significantly lower attrition
+- Reassign projects from employees working 6 or 7 projects to employees working 2 projects.
+
+---
+
+**Q10**
+
+Are certain departments assigned more projects than others?
+
+After investigating the data, we found that there is no significant difference in the number of projects assigned departmentally.
+
+Thus the only recommendation is to ensure that employees in all departments be assigned 3, 4 or 5 projects.
+
+---
+
+**Q11**
+
+
 
