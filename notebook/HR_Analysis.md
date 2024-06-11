@@ -738,6 +738,13 @@ Based on the size differences in the number of employees in each department, the
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/31933571-6ac8-4891-bfe6-2ad917e57afc)
 
+#### Observations
+
+- Salaries in the low and medium brackets are near-evenly distributed across all departments except for management, which makes sense
+- Accounting and Marketing see a slightly higher percentage of employees who fall into the "High" salary bracket, without additional data the reasons remain 
+  unknown.
+- There is no specific department that could be viewed as underpaid considering these data
+
 ---
 
 ### Suggestions:
