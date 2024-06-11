@@ -581,9 +581,6 @@ GROUP BY
 
 Investigating the 260-270 hour, 80-90% cluster:
 
-```sql
-
-
 #### Observations
 
 Should higher working hours be a strong indicator of poor performance evaluation scores, we would expect to see a cluster of employees in the lower performance bins over the 160 hours per month mark, but that is not the case. Observations :
