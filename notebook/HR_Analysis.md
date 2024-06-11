@@ -9,13 +9,23 @@ The aim of this case study is to determine possible reasons for employee dissati
 
 ---
 
-### Defining the business tasks
+### Defining the business problems
+
+- What are the reasons behind employee attrition, and how can Salifort Motors improve their employee retention rate?
+- What are the reasons behind employee dissatisfaction, and how can Salifort Motors improve overall job satisfaction for their employees?
+- What are the reasons behind low performance evaluation scores, and how can Salifort Motors improve employee evaluation scores?
+
+---
+
+### Defining the business questions
+
+By performing exploratory data analysis, the answers to these questions will aid us in providing recommendations to solve the original business problems outlined above.
 
 **Q1** : How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
 
-Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked#:~:text=The%20Act%20requires%20that%20employees,pay%20for%20the%20overtime%20hours.) from the US Department of Labor
+Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked#:~:text=The%20Act%20requires%20that%20employees,pay%20for%20the%20overtime%20hours.) from the US Department of Labor on recommended monthly working hours.
 
-**Q2** : Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction? 
+**Q2** : Is there a relationship between the number of projects employees are assigned, and overall job satisfaction?
 
 **Q3** : How does time spent at the company affect overall job satisfaction?
 
@@ -43,7 +53,7 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 - This publicly available data was obtained on Kaggle [here](https://www.kaggle.com/datasets/raminhuseyn/hr-analytics-data-set)
 
-- The table used in this case study is HR_capstone_dataset.csv
+- The table used in this case study is HR_capstone_dataset_copy.csv
 
 - [Guidelines](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked#:~:text=The%20Act%20requires%20that%20employees,pay%20for%20the%20overtime%20hours.) from the US Department of Labor on recommended working week hours.
 
@@ -51,14 +61,14 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 ### Tools used in analysis
 
-- Microsoft SQL Server Management Studio 20, using T-SQL for cleaning tasks, exploratory data analysis and manipulation
+- Microsoft SQL Server Management Studio 20, using T-SQL for cleaning tasks, data manipulation and exploratory data analysis
 - Tableau for related charts and a dashboard
 
 ---
 
 ### Data Cleaning 
 
-- Create a copy of the dataset that will be cleaned and manipulated, so that the raw data is still in tact
+- Create a copy of the dataset that will be cleaned and manipulated, so that the raw data is still intact
 
 - Data formats were corrected on import to MS Sql Server Management Studio
 
@@ -72,9 +82,7 @@ Supporting [data](https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-wor
 
 - Renaming of variables
 
-- 
-
-- Start by cleaning the data, looking at the business tasks as which new variables need to be made may only become apparent in motion
+- Creating aggregations of numeric data as new variables
 
 ---
 
@@ -285,7 +293,7 @@ Datapoints are distributed somewhat randomly besides two obvious clusters:
 
 **Business Task Q2** 
 
-Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction?
+Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction?
 
 To observe the job satisfaction level of employees by the number of projects they are working on :
 
@@ -302,12 +310,9 @@ A Bar Chart showing Average Satisfaction Level by Number of Projects
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/90b1945c-be0a-493d-b022-312bcfbdc8e5)
 
-
-
 #### Observations :
 
-- We can clearly see that when employees are tasked with 7 projects monthly, that there is a massive drop in satisfaction level, and that employees tasked with 
-  6 projects monthly also show a very low satisfaction score. 
+- We can clearly see that when employees are tasked with 2, 6 or 7 projects monthly, that there is a massive drop in satisfaction level. This suggests that being either over or under worked resulsts in a low job satisfaction level. 
 
 - Employees tasked with 3, 4 and 5 projects record the highest level of satisfaction at an average of 0.69
 
