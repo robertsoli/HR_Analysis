@@ -581,15 +581,34 @@ GROUP BY
 
 Investigating the 260-270 hour, 80-90% cluster:
 
+```sql
+SELECT  department, 
+	COUNT(*) AS employee_count,
+	AVG(satisfaction_level) AS avg_satisfaction,
+	COUNT(CASE WHEN number_project = 2 THEN 1 ELSE NULL END) AS two_projects,
+	COUNT(CASE WHEN number_project = 3 THEN 1 ELSE NULL END) AS three_projects,
+	COUNT(CASE WHEN number_project = 4 THEN 1 ELSE NULL END) AS four_projects,
+	COUNT(CASE WHEN number_project = 5 THEN 1 ELSE NULL END) AS five_projects,
+	COUNT(CASE WHEN number_project = 6 THEN 1 ELSE NULL END) AS six_projects,
+	COUNT(CASE WHEN number_project = 7 THEN 1 ELSE NULL END) AS seven_projects
+FROM dbo.HR_capstone_dataset_copy
+WHERE evaluation_group = '80-90%' AND average_monthly_hours BETWEEN 260 AND 270
+GROUP BY department
+ORDER BY avg_satisfaction DESC
+```
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/e83d3621-364c-4009-901c-4d7f8c858a8c)
+
 #### Observations
 
-Should higher working hours be a strong indicator of poor performance evaluation scores, we would expect to see a cluster of employees in the lower performance bins over the 160 hours per month mark, but that is not the case. Observations :
+Should higher working hours be a strong indicator of poor performance evaluation scores, we would expect to see a cluster of employees in the lower performance bins over the 160 hours per month mark, but that is not the case :
 
-  - There is a cluster of employees with performance evaluations between 40 and 60%, when working between 130 to 150 hours per month.
+  - There is a cluster of employees with performance evaluations between 40 and 60%, when working between 140 to 150 hours per month.
   - There is a cluster of employees with performance evaluations between 80 and 100%, when working between 240 to 260 hours per month.
 
 Overall, it seems that employees working more than 160 hours per month are getting higher evaluation scores, this may be due to the following reasons:
 
+ - The majority of employees in this evaluation bracket are working between 3 and 5 projects.
  - The company places a high value on employees who work more than the standard amount, thus the higher performance scores for employees working in excess of 160 hours per month.
  - Employees may be paid overtime, resulting in higher motivation to work longer hours monthly at a high level of performance.
 
