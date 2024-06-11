@@ -213,9 +213,9 @@ DELETE FROM DuplicateCTE WHERE RowNum > 1;
 
 ---
 
-**Business Task Q1**
+### Business Task 1
 
-How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
+**How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount?**
 
 Firstly calculating the amount of employees working both over and under 160 hours per month :
 
@@ -291,9 +291,9 @@ Datapoints are distributed somewhat randomly besides two obvious clusters:
 
 ---
 
-**Business Task Q2** 
+### Business Task 2
 
-Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction?
+**Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction?**
 
 To observe the job satisfaction level of employees by the number of projects they are working on :
 
@@ -318,9 +318,9 @@ A Bar Chart showing Average Satisfaction Level by Number of Projects
 
 ---
 
-**Business Task Q3**
+### Business Task 3
 
-How does time spent at the company affect overall job satisfaction? 
+**How does time spent at the company affect overall job satisfaction?** 
 
 First lets have a look into the average satisfaction levels by tenure :
 
@@ -381,9 +381,9 @@ A Bar Chart to show the data in a more visual sense
 
 ---
 
-**Business task Q4**
+### Business task 4
 
-How many employees experienced work accidents and left the company? How many stayed?
+**How many employees experienced work accidents and left the company? How many stayed?**
 
 ```sql
 SELECT 
@@ -433,9 +433,9 @@ ORDER BY total_accidents DESC
 
 ---
 
-**Business task Q5**
+### Business task 5
 
-How does a promotion affect employee retention?
+**How does a promotion affect employee retention?**
 
 Looking at the number of employees who have left the company without receiving a promotion, and the amount of employees who left after receiving a promotion would be of use in this scenario: 
 
@@ -476,7 +476,7 @@ WHERE left_company = 1 AND promotion_last_5years = 1
 
 ---
 
-#### Business task Q6 
+### Business task 6
 
 **Are there particular departments that have a higher rate of attrition?**
 
@@ -506,7 +506,7 @@ And a horizontal bar chart to vizualise the data
 
 ---
 
-#### Business task Q7
+### Business task Q7
 
 **Which departments show the highest performance review score for active employees? Which departments show the lowest?**
 
@@ -546,7 +546,7 @@ Based on the amount of data in the table, it would be more useful to view it as 
  
 ---
 
-#### Business task Q8
+### Business task Q8
 
 **How do monthly working hours influence performance scores?**
 
@@ -613,7 +613,7 @@ Should higher working hours be a strong indicator of poor performance evaluation
 
 ---
 
-#### Business task Q9 
+### Business task Q9 
 
 **Does project count contribute to employee attrition?**
 
@@ -654,7 +654,7 @@ Based on the data, the following observations can be made:
 
 ---
 
-#### Business task Q10
+### Business task Q10
 
 **Are certain departments assigned more projects than others?**
 
@@ -686,7 +686,7 @@ ORDER BY seven_projects DESC
 
 ---
 
-#### Business task Q11 
+### Business task Q11 
 
 **How do evaluation scores fluctuate with salary brackets?**
 
@@ -702,7 +702,7 @@ The data here does not support this, as the distribution is similar across all s
 
 ---
 
-#### Business task Q12
+### Business task Q12
 
 **How are salary brackets distributed per department?**
 
