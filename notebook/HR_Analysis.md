@@ -273,13 +273,13 @@ ORDER BY satisfaction_group ASC;
 
 Charts to zoom out and view the data in a more pallatable means :
 
-A Pyramid Chart
+A Pyramid Chart showing the number of employees in each evaluation bin
 
 ![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/068936da-b5c1-4330-a411-5e8be620dee9)
 
 A Scatter Plot
 
-![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/0b53d511-d8ad-4b08-b868-0679bd3b12fe)
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/54537ef7-5438-41c1-87b0-2d31f59fb061)
 
 #### Observations :
 
