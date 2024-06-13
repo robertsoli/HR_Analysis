@@ -508,7 +508,7 @@ And a horizontal bar chart to vizualise the data
 
 ---
 
-### Business task Q7
+### Business task 7
 
 **Which departments show the highest performance review score for active employees? Which departments show the lowest?**
 
@@ -548,7 +548,7 @@ Based on the amount of data in the table, it would be more useful to view it as 
  
 ---
 
-### Business task Q8
+### Business task 8
 
 **How do monthly working hours influence performance scores?**
 
@@ -615,7 +615,7 @@ Should higher working hours be a strong indicator of poor performance evaluation
 
 ---
 
-### Business task Q9 
+### Business task 9 
 
 **Does project count contribute to employee attrition?**
 
@@ -656,7 +656,7 @@ Based on the data, the following observations can be made:
 
 ---
 
-### Business task Q10
+### Business task 10
 
 **Are certain departments assigned more projects than others?**
 
@@ -688,7 +688,7 @@ ORDER BY seven_projects DESC
 
 ---
 
-### Business task Q11 
+### Business task 11 
 
 **How do evaluation scores fluctuate with salary brackets?**
 
@@ -704,7 +704,7 @@ The data here does not support this, as the distribution is similar across all s
 
 ---
 
-### Business task Q12
+### Business task 12
 
 **How are salary brackets distributed per department?**
 
