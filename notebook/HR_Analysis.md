@@ -755,7 +755,7 @@ Based on the size differences in the number of employees in each department, the
 
 ---
 
-**Business Task Q1**
+**Business Task 1**
 
 How many employees are working more than the standard 160 hours per month, and what is their job satisfaction level compared to workers who come in under that amount? 
 
@@ -771,27 +771,27 @@ Suggestions are as follows:
 
 ---
 
-**Business Task Q2** 
+**Business Task 2** 
 
 Is there a relationship between the number of projects employees are assigned, and overall job dissatisfaction? Is there an ideal amount of projects, where employees show consistent satisfaction?
 
-The data shows that this is a large contributor to employee attrition, with a definite correlation between too few or too many projects and employee attrition. 
+The data shows that this is a large contributor to employee satisfaction levels, with a definite correlation between too few or too many projects and employee satisfaction. 
 
 Suggestions are as follows:
 
-- Where applicable, assign projects from employees who have 6 projects to employees who have 2 or 3 projects, which should reduce attrition in both 2 and 6 project cases. 
+- Where applicable, assign projects from employees who have 6 or 7 projects to employees who have 2 or 3 projects, which should improve satisfaction in 2, 6 and 7 project cases. 
 
-- Never have an employee work on 7 projects as it is a guarantee that they will leave the company
+- Never have an employee work on 7 projects as it is a guarantee that they will be dissatisfied and leave the company.
 
 - Aim to assign 3, 4 or 5 projects per employee.
 
 ---
 
-**Business Task Q3**
+**Business Task 3**
 
 How does time spent at the company affect overall job satisfaction? 
 
-With employee satisfaction dropping from the 2 year tenure mark to the lowest point at 4 years, it would be advised to look for answers at the 4 year tenure mark.  
+With employee satisfaction dropping from the 2 year tenure mark to the lowest point at 4 years, it would be advised to look for answers at the 4 year tenure mark.
 
 To combat the low satisfaction score at the 4 year mark: 
 
@@ -803,7 +803,7 @@ To combat the low satisfaction score at the 4 year mark:
 
 ---
 
-**Business Task Q4**
+**Business Task 4**
 
 How many employees experienced work accidents and left the company? How many stayed?
 
@@ -815,7 +815,7 @@ With workplace accidents being as common as 1 in 6 employees, the following sugg
 
 ---
 
-**Business Task Q5**
+**Business Task 5**
 
 How does a promotion affect employee retention?
 
@@ -823,7 +823,7 @@ How does a promotion affect employee retention?
 
 - 96% of employees who received a promotion remained at the company. 
 
-- With 203 total promotions, or 1.7%, out of the 11991 workforce, the number of promotions being given is far too low. Citing [SHRM](https://en.wikipedia.org/wiki/Society_for_Human_Resource_Management), the industry average for a manufacturing company is 6%.
+- With 203 total promotions, or 1.7%, out of the 11991 workforce, the number of promotions being given is far too low. Citing [SHRM](https://en.wikipedia.org/wiki/Society_for_Human_Resource_Management), the industry average for promotions at a manufacturing company is 6%.
 
 Suggestions are as follows: 
 
@@ -831,7 +831,7 @@ Based on this information, Salifort Motors should review their organizational st
 
 ---
 
-**Business Task Q6**
+**Business Task 6**
 
 Are there particular departments that have a higher rate of attrition?
 
@@ -843,7 +843,7 @@ Suggestions are as follows:
 
 --- 
 
-**Business Task Q7**
+**Business Task 7**
 
 Which departments show the highest performance review score for active employees? Which departments show the lowest?
 
@@ -857,7 +857,7 @@ With HR scoring highest for performance, and Product Management the lowest, the 
 
 ---
 
-**Business Task Q8**
+**Business Task 8**
 
 How do monthly working hours influence performance scores?
 
@@ -870,7 +870,7 @@ To make the biggest difference to overall evaluation scores, we would look into 
  
 ---
 
-**Business Task Q9**
+**Business Task 9**
 
 Does project count contribute to employee attrition?
 
@@ -887,13 +887,12 @@ Suggestions are as follows:
 
 ---
 
-**Business Tasks Q10, Q11 and Q12**
+**Business Tasks 10, 11 and 12**
 
 The remaining three business questions did not yield actionable insights, all the data was distributed somewhat evenly and hence there are no suggestions to be made for these remaining questions.
 
 ---
 
-## Conclusion:
 
 
 
