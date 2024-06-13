@@ -9,14 +9,6 @@ The aim of this case study is to determine possible reasons for employee dissati
 
 ---
 
-## Defining the business problems
-
-- What are the reasons behind employee attrition, and how can Salifort Motors improve their employee retention rate?
-- What are the reasons behind employee dissatisfaction, and how can Salifort Motors improve overall job satisfaction for their employees?
-- What are the reasons behind low performance evaluation scores, and how can Salifort Motors improve employee evaluation scores?
-
----
-
 ## Defining the business tasks
 
 By performing exploratory data analysis, the answers to these questions will aid us in providing recommendations to solve the original business problems outlined above.
