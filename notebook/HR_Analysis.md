@@ -302,7 +302,7 @@ ORDER BY avg_satisfaction_level ASC
 
 A Bar Chart showing Average Satisfaction Level by Number of Projects
 
-![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/90b1945c-be0a-493d-b022-312bcfbdc8e5)
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/2fcc33b7-052c-4ea9-a3f8-6ea21e48c473)
 
 #### Observations :
 
