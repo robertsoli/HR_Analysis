@@ -203,6 +203,65 @@ DELETE FROM DuplicateCTE WHERE RowNum > 1;
 
 ---
 
+### Data Manipulation
+
+#### Creating Satisfaction Level Bins
+
+```sql
+
+ALTER TABLE dbo.HR_capstone_dataset_copy ADD satisfaction_group varchar(50);
+
+UPDATE dbo.HR_capstone_dataset_copy  SET satisfaction_group =
+(CASE WHEN satisfaction_level <=0.1 THEN '0-10%'
+	  WHEN satisfaction_level > 0.1 AND satisfaction_level <=0.2 THEN '10-20%'
+      WHEN satisfaction_level > 0.2 AND satisfaction_level <=0.3 THEN '20-30%'
+	  WHEN satisfaction_level > 0.3 AND satisfaction_level <=0.4 THEN '30-40%'
+	  WHEN satisfaction_level > 0.4 AND satisfaction_level <=0.5 THEN '40-50%'
+	  WHEN satisfaction_level > 0.5 AND satisfaction_level <=0.6 THEN '50-60%'
+	  WHEN satisfaction_level > 0.6 AND satisfaction_level <=0.7 THEN '60-70%'
+      WHEN satisfaction_level > 0.7 AND satisfaction_level <=0.8 THEN '70-80%'
+	  WHEN satisfaction_level > 0.8 AND satisfaction_level <=0.9 THEN '80-90%'
+	  WHEN satisfaction_level > 0.9 AND satisfaction_level <=1 THEN '90-100%'
+END);
+```
+
+### Creating Evaluation Score Bins
+
+```sql
+
+ALTER TABLE dbo.HR_capstone_dataset_copy ADD evaluation_group varchar(50);
+
+UPDATE dbo.HR_capstone_dataset_copy  SET evaluation_group =
+(CASE WHEN last_evaluation <=0.1 THEN '0-10%'
+	  WHEN last_evaluation > 0.1 AND last_evaluation <=0.2 THEN '10-20%'
+      WHEN last_evaluation > 0.2 AND last_evaluation <=0.3 THEN '20-30%'
+	  WHEN last_evaluation > 0.3 AND last_evaluation <=0.4 THEN '30-40%'
+	  WHEN last_evaluation > 0.4 AND last_evaluation <=0.5 THEN '40-50%'
+	  WHEN last_evaluation > 0.5 AND last_evaluation <=0.6 THEN '50-60%'
+	  WHEN last_evaluation > 0.6 AND last_evaluation <=0.7 THEN '60-70%'
+      WHEN last_evaluation > 0.7 AND last_evaluation <=0.8 THEN '70-80%'
+	  WHEN last_evaluation > 0.8 AND last_evaluation <=0.9 THEN '80-90%'
+	  WHEN last_evaluation > 0.9 AND last_evaluation <=1 THEN '90-100%'
+END);
+
+```
+
+### Creating Average Monthly Hour bins
+
+```sql
+
+ALTER TABLE dbo.HR_capstone_dataset_copy 
+ADD monthly_hours_bin varchar(50);
+
+UPDATE dbo.HR_capstone_dataset_copy  SET monthly_hours_bin =
+(CASE WHEN average_monthly_hours <= 160 THEN 'Under 160 Hours'
+	  WHEN average_monthly_hours > 160 THEN 'Over 160 Hours'
+END);
+
+```
+
+---
+
 ## Exploratory Data Analysis
 
 ---
