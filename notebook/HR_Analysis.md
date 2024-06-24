@@ -944,7 +944,11 @@ The remaining three business questions did not yield actionable insights, all th
 
 ---
 
-This case study is concluded by a Dashboard, which is housed in a separate folder. Thanks for reading!
+This case study is concluded by a Dashboard, screenshot below and the twbx file in a separate folder in this repo. Thanks for reading!
+
+**Salifort Motors Dashboard**
+
+![image](https://github.com/robertsoli/HR_Analysis/assets/156069037/6ccb1a88-6b2f-432f-907f-4a563fc77946)
 
 
 
