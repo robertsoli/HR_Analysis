@@ -944,6 +944,9 @@ The remaining three business questions did not yield actionable insights, all th
 
 ---
 
+This case study is concluded by a Dashboard, which is housed in a separate folder. Thanks for reading!
+
+
 
 
 
